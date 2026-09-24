@@ -1,23 +1,72 @@
 aid: aldiusa
+
 name: Aldiusa
-description: 'Aldiusa is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: >-
+  Aldi USA operates a network of grocery stores across the United States, offering a limited‑assortment
+  model focused on high‑quality private‑label products at everyday low prices. The company emphasizes
+  simplicity, efficiency, and value, providing both in‑store shopping and online ordering for pickup
+  and delivery through its website. Aldi USA is part of the global Aldi group, known for its cost‑effective
+  retail approach and commitment to sustainability.
+
 url: https://raw.githubusercontent.com/api-evangelist/aldiusa/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
-- Company
-apis: []
+- Grocery
+- Retail
+- E‑commerce
+- Low‑price
+- Sustainability
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Security
+  url: https://hackerone.com/instacart
+- type: SecurityTxt
+  url: well-known/aldiusa-security.txt
+- type: WellKnown
+  url: well-known/aldiusa-well-known.yml
+- type: Hosts
+  url: hosts/aldiusa-hosts.yml
+- type: Vendors
+  url: vendors/aldiusa-vendors.yml
+- type: TermsOfService
+  url: https://www.aldi.us/store/aldi/pages/terms-of-use
+- type: Pricing
+  url: https://www.aldi.us/store/aldi/pages/price-drops
+- type: Newsroom
+  url: https://corporate.aldi.us/newsroom/product-recalls/
+- type: Documentation
+  url: https://help.aldi.us/
+- type: VulnerabilityDisclosure
+  url: security/aldiusa-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/aldiusa-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aldiusa
+  url: https://www.aldi.us
+
+apis: []
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 12
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
